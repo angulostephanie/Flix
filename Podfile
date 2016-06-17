@@ -7,8 +7,7 @@ target 'flix' do
     use_frameworks!	
     inhibit_all_warnings!
 	
-
     # Pods for flix
     pod 'AFNetworking'
-  
+    pod 'MBProgressHUD'
 end
