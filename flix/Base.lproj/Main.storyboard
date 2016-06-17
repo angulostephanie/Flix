@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2Ec-RS-rF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ASd-7k-YR4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,6 @@
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="MoviesViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -87,8 +86,9 @@
                         <outlet property="tableView" destination="lq1-er-dtg" id="TdO-yT-uRE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-526.5" y="258.5"/>
+            <point key="canvasLocation" x="107.5" y="272.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="S6I-tl-1SP">
@@ -158,13 +158,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkc-hE-QCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.5" y="258.5"/>
+            <point key="canvasLocation" x="566.5" y="272.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Movies-->
         <scene sceneID="VNx-vY-Qex">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Ec-RS-rF8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" image="movie-1" id="eDw-4q-4uw"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8Ix-k7-Du9"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CNt-cF-HRg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -176,7 +179,70 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35B-bS-Y69" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1084" y="259"/>
+            <point key="canvasLocation" x="-496.5" y="272.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="r25-tZ-APr">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ASd-7k-YR4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Uag-xe-6ha">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="He2-Ox-epo" kind="relationship" relationship="viewControllers" id="DyN-qI-uPt"/>
+                        <segue destination="2Ec-RS-rF8" kind="relationship" relationship="viewControllers" id="eC2-uy-e9S"/>
+                        <segue destination="6e8-0L-ycy" kind="relationship" relationship="viewControllers" id="htx-hb-f8m"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdP-JX-Ly0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1056" y="272"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Dla-Ub-ay8">
+            <objects>
+                <viewController id="He2-Ox-epo" customClass="HomeViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SM3-cO-zBi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Dh-lG-0Gj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="bb8-5A-4zv"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8PP-Ev-n5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1234.5" y="1118.5"/>
+        </scene>
+        <!--Top Rated-->
+        <scene sceneID="yVH-ED-SzR">
+            <objects>
+                <viewController id="6e8-0L-ycy" customClass="TopRatedViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wY5-au-CyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top Rated" image="star" id="dFb-xS-NGz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tnx-HV-cCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-560.5" y="1059.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="movie-1" width="24" height="24"/>
+        <image name="star" width="24" height="24"/>
+    </resources>
 </document>
