@@ -10,10 +10,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var homeView: UIImageView!
+    var movies: [NSDictionary]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //let movie = movies![indexPath]
+        let baseUrl = "http://image.tmdb.org/t/p/w500"
+        
+        //if let posterPath = movie["poster_path"] as? String {
+           // let imageUrl = NSURL(string: baseUrl + posterPath)
+            //self.homeView.setImageWithURL(imageUrl!)
+        //}
     }
 
     override func didReceiveMemoryWarning() {

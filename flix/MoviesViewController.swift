@@ -48,6 +48,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         print("prepare for segue has been called")
         
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if let movies = movies {
@@ -132,7 +133,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
             self.tableView.reloadData()
             refreshControl.endRefreshing()
-        });
+            });
         task.resume()
+    }
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
